@@ -1,5 +1,5 @@
 import pygame
-class Furniture:
+class Entity:
     def __init__(self,bX,bY,player,pyt_k_kartinke):
         self.bY = bY
         self.bX=bX

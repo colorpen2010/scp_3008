@@ -1,7 +1,8 @@
-import pygame,furniture
+import pygame,entity,inventories
 
 bmoveX=200
 bmoveY=200
-player2=furniture.Furniture(bmoveX,bmoveY,None,'sprites/player/игрок.png')
-player2.player=player2
-box1=furniture.Furniture(bmoveX+40,bmoveY,player2,'sprites/props/коробка.png')
+player=entity.Entity(bmoveX, bmoveY, None, 'sprites/player/игрок.png')
+player.player=player
+inventory=inventories.Inventory_system()
+box1=entity.Entity(bmoveX + 40, bmoveY, player, 'sprites/props/коробка.png')

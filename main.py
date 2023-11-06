@@ -1,5 +1,5 @@
 '''
-движение игрока
+инвентарь
 '''
 import model,view,controller
 while True:

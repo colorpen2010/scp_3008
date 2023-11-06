@@ -5,11 +5,13 @@ def control():
     for o in events:
         if o.type == pygame.QUIT:
             exit()
+        if o.type == pygame.MOUSEBUTTONDOWN and o.button == pygame.BUTTON_LEFT:
+            return
         if o.type == pygame.KEYDOWN and o.key == pygame.K_w:
-            model.player2.bY-=25
+            model.player.bY-=25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_s:
-            model.player2.bY+=25
+            model.player.bY+=25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_a:
-            model.player2.bX-=25
+            model.player.bX-=25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_d:
-            model.player2.bX+=25
+            model.player.bX+=25
