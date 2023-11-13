@@ -1,5 +1,8 @@
-import pygame,model
+import pygame, model
+
 pygame.key.set_repeat(100)
+
+
 def control():
     events = pygame.event.get()
     for o in events:
@@ -8,10 +11,12 @@ def control():
         if o.type == pygame.MOUSEBUTTONDOWN and o.button == pygame.BUTTON_LEFT:
             return
         if o.type == pygame.KEYDOWN and o.key == pygame.K_w:
-            model.player.bY-=25
+            model.player.bY -= 25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_s:
-            model.player.bY+=25
+            model.player.bY += 25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_a:
-            model.player.bX-=25
+            model.player.bX -= 25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_d:
-            model.player.bX+=25
+            model.player.bX += 25
+        if o.type == pygame.KEYUP and o.key == pygame.K_e:
+            model.inventory.visib = not model.inventory.visib
