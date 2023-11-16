@@ -8,5 +8,6 @@ def risovanie():
     screen.fill([0,0,0])
     model.box1.risyem(screen)
     model.player.risyem(screen)
+    model.water.risyem(screen)
     model.inventory.risovanie(screen)
     pygame.display.flip()
