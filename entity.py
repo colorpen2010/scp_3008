@@ -15,4 +15,5 @@ class Entity:
         rect.centerx = self.bX - self.player.bX + settings.SIZE[0] / 2
         rect.centery = self.bY - self.player.bY + settings.SIZE[1] / 2
         screen.blit(self.mebel, rect)
-        pygame.draw.rect(screen,[35,234,20],rect,3)
+        # if settings.debug_mode==True:
+        #     pygame.draw.rect(screen,[35,234,20],rect,3)

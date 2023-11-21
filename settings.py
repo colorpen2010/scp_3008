@@ -1,2 +1,2 @@
 SIZE=[900,700]
- # m
+debug_mode=False

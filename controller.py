@@ -1,5 +1,7 @@
 import pygame, model
 
+import settings
+
 pygame.key.set_repeat(100)
 
 
@@ -10,6 +12,8 @@ def control():
             exit()
         if o.type == pygame.MOUSEBUTTONDOWN and o.button == pygame.BUTTON_LEFT:
             return
+        if o.type == pygame.KEYUP and o.key == pygame.K_TAB:
+            settings.debug_mode = not settings.debug_mode
         if o.type == pygame.KEYDOWN and o.key == pygame.K_w:
             model.player.bY -= 25
         if o.type == pygame.KEYDOWN and o.key == pygame.K_s:
