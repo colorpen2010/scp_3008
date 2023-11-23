@@ -10,6 +10,4 @@ def risovanie():
     model.player.risyem(screen)
     model.water.risyem(screen)
     model.inventory.risovanie(screen)
-    if settings.debug_mode==True:
-        pygame.draw.rect(screen,[35,234,20],model.pickup,3)
     pygame.display.flip()

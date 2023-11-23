@@ -1,2 +1,2 @@
-SIZE=[900,700]
+SIZE=[400,300]
 debug_mode=False
