@@ -14,14 +14,16 @@ class Player(entity.Entity):
         entity.Entity.risyem(self, screen)
         if settings.debug_mode:
             pygame.draw.rect(screen, [0, 200, 0], self.pickup, 3)
+
     def moveup(self):
         self.bY -= 25
+        # self.pickup.centery=
+
     def movedown(self):
         self.bY += 25
+
     def moveleft(self):
         self.bX -= 25
+
     def moveright(self):
         self.bX += 25
-
-
-

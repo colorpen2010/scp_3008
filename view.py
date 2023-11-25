@@ -1,4 +1,4 @@
-import pygame,model, settings
+import pygame,model, settings,entity
 pygame.init()
 screen=pygame.display.set_mode(settings.SIZE)
 pygame.mixer_music.load('audio/music/friday_theme.mp3')
@@ -9,5 +9,7 @@ def risovanie():
     model.box1.risyem(screen)
     model.player.risyem(screen)
     model.water.risyem(screen)
+    pygame.draw.circle(screen,[0,255,0],[entity.xmovier(model.player,240),entity.ymovier(model.player,200)],10,3)
+    pygame.draw.circle(screen,[255,0,0],[200,150],10,3)
     model.inventory.risovanie(screen)
     pygame.display.flip()
