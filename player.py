@@ -1,19 +1,21 @@
-import pygame, entity, settings
+import pygame, entity, settings,backfiles
 
 
 class Player(entity.Entity):
     def __init__(self):
         entity.Entity.__init__(self, 200, 200, None, 'sprites/player/игрок.png')
+        backfiles.player = self
         self.player = self
 
         self.pickup = pygame.rect.Rect(self.bX, self.bY, 100, 100)
-        self.pickup.centerx = self.bX - self.player.bX + settings.SIZE[0] / 2
-        self.pickup.centery = self.bY - self.player.bY + settings.SIZE[1] / 2
 
     def risyem(self, screen: pygame.Surface):
+        self.nrect=pygame.rect.Rect(self.bX, self.bY, 100, 100)
+        self.nrect.x = backfiles.xmovier(self.pickup.x)
+        self.nrect.y = backfiles.ymovier(self.pickup.y)
         entity.Entity.risyem(self, screen)
         if settings.debug_mode:
-            pygame.draw.rect(screen, [0, 200, 0], self.pickup, 3)
+            pygame.draw.rect(screen, [0, 200, 0], self.nrect, 3)
 
     def moveup(self):
         self.bY -= 25
