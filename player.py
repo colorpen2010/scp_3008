@@ -3,7 +3,7 @@ import pygame, entity, settings,backfiles
 
 class Player(entity.Entity):
     def __init__(self):
-        entity.Entity.__init__(self, 200, 200, None, 'sprites/player/игрок.png')
+        entity.Entity.__init__(self, 200, 200, None, 'sprites/player/игрок2.png')
         backfiles.player = self
         self.player = self
 
@@ -19,13 +19,22 @@ class Player(entity.Entity):
 
     def moveup(self):
         self.bY -= 25
-        # self.pickup.centery=
+        self.pickup.y = self.bY - 80
+        self.pickup.x = self.bX - 42
 
     def movedown(self):
         self.bY += 25
+        self.pickup.y = self.bY + 30
+        self.pickup.x = self.bX - 42
 
     def moveleft(self):
         self.bX -= 25
+        self.pickup.x = self.bX + 0
+        self.pickup.y = self.bY - 25
+
 
     def moveright(self):
         self.bX += 25
+        self.pickup.x = self.bX-80
+        self.pickup.y = self.bY - 25
+
